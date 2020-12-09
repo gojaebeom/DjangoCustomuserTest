@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block content %}
+   <h2>Join</h2>
+   <form method="post" action="/join/">
+      {% csrf_token %}
+      <input type="email" name="email">
+      <input type="password" name="password">
+      <button type="submit">Sign Up</button>
+   </form>
+{% endblock %}
